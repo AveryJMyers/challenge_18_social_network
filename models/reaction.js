@@ -1,6 +1,6 @@
 const { Schema, Types } = require('mongoose');
 
-const reactionSchema = newSchema({
+const reactionSchema = new Schema({
     reactionId: {
         type: ObjectId,
         default: () => new mongoose.Types.ObjectId(),
@@ -18,6 +18,10 @@ const reactionSchema = newSchema({
         type: Date,
         default: Date.now()
     }
-}
+    }
 )
-const userSchema = new Schema
+
+
+const Reaction = model('reaction', reactionSchema);
+
+module.exports = Reaction; 
