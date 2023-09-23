@@ -9,14 +9,6 @@ connection.on('error', (err) => {
 connection.once('open', async () => {
   try {
     console.log('Connected to the database');
-
-    // Drop collections if they exist
-    await Promise.all([
-      User.deleteMany(),
-      Reaction.deleteMany(),
-      Thought.deleteMany(),
-    ]);
-
     // Seed users
     const users = await User.insertMany(userData);
 
