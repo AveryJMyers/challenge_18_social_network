@@ -5,6 +5,7 @@ const {
     getOneUser,
     createUser,
     deleteUser,
+    updateUser
 } = require('../../controllers/userRoutes');
 
 router.route('/')
@@ -15,7 +16,8 @@ router.route('/')
 
 router.route('/:userId')
 .get(getOneUser)
-.delete(deleteUser);
+.delete(deleteUser)
+.put(updateUser);
 
 
 
