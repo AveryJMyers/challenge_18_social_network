@@ -13,9 +13,9 @@ const thoughtSchema = new Schema({
         default: Date.now(),
     },
     username: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true,
+      type: String,
+      required: true,
+      ref: 'User',
     },
       reactions: [
         {
